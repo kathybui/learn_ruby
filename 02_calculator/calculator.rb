@@ -7,6 +7,7 @@ def subtract(numb1, numb2)
 end
 
 def sum(array)
+  # tried to do this way but inject is more concise
   #if array == []
    # return 0
   #end
@@ -22,4 +23,11 @@ end
 
 def power(numb1, numb2)
   numb1**numb2
+end
+
+def factorial(numb)
+  if numb == 0
+  return 1
+else numb * factorial(numb - 1)
+  end
 end
