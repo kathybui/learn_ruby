@@ -19,5 +19,13 @@ def first_word(string)
 end
 
 def titleize(string)
-  string.split(' ').map {|word| word.capitalize}.join(" ")
+  inputString = string.split.map do |word|
+  if ["is", "on", "the", "in", "if", "of", "and", "etc", "are"].include?(word)
+    word
+  else
+    word.capitalize
+  end
+ end
+ inputString[0].capitalize
+ inputString.join(" ")
 end
